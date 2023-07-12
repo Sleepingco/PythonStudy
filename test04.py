@@ -70,12 +70,12 @@ while True:
     if Menu == '':
         for i in range(len(arMenu) - 1, len(arMenu) - 2, -1):
             del arMenu[i]
-        print(arMenu)
+        print('메뉴',arMenu)
         sum1 = 0
         for i in range(-1, len(arMenu) - 1, 1):
             temp = arPrice[i]
             sum1 += temp
-        print(arPrice)
+        print('가격',arPrice)
         print('합계', sum1)
         break
     Price = int(input('가격 입력'))

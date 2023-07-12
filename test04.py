@@ -16,6 +16,7 @@ arName.insert(3, '박성호')
 # x = arName[3]
 # print(type(x))
 
+
 # update
 # arName[3] = '하이미디어'
 
@@ -70,12 +71,13 @@ while True:
     if Menu == '':
         for i in range(len(arMenu) - 1, len(arMenu) - 2, -1):
             del arMenu[i]
-        print('메뉴',arMenu)
         sum1 = 0
         for i in range(-1, len(arMenu) - 1, 1):
             temp = arPrice[i]
             sum1 += temp
-        print('가격',arPrice)
+            print(f'메뉴:{arMenu[i]},가격:{arPrice[i]}')
+        print('메뉴', arMenu)
+        print('가격', arPrice)
         print('합계', sum1)
         break
     Price = int(input('가격 입력'))

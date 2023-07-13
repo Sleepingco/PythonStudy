@@ -60,3 +60,22 @@
 #     if j%2==1:
 #         print(j)
 
+# 문자열 메소드
+str1 = 'Moutain Fountain Maintain Captain'
+print(str1.lower())
+print(str1.upper())
+print(str1.swapcase())
+print(str1.count('tain', 3, 10))  # 3번이후에 10번전까지 a가 몇번나오는지
+print(str1.find('tain'))  # 시작부터 인덱스 부터 찾을때 까지
+print(str1.rfind('tain'))  # 끝인덱스 부터 찾음
+print(str1.find('tain', 10))  # 10번 인덱스부터 찾음
+print(str1.replace('tain', 'tian'))  # 모든 해당문자열을 모두대체
+print(str1.replace('tain', 'tian', 2))  # 해당문자열을 2번만 모두대체
+print('avion '+'navigation')
+print('avion '*5)
+print(len('avion'))
+
+str1 = 'Good Morning Vietnam saigon'
+ar = str1.split(' ')
+for x in ar:
+    print(x)    # 스플릿으로 나눈뒤 출력하면 리스트가 나옴 JS에서는 배열

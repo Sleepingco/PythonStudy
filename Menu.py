@@ -3,14 +3,42 @@
 # arMenu = [{},{},{}]
 arMenu = []
 sum1 = 0
+# while True:
+#     nName = str(input('메뉴명 입력'))
+#     if nName == '':
+#         for index, value in enumerate(arMenu):
+#             print(index + 1, value)
+#         print('합계', sum1)
+#         break
+#     nPrice = int(input('가격 입력'))
+#     sum1 += nPrice
+#     Menu = {'menu': nName}, {'price': nPrice}
+#     arMenu.append(Menu)
+
+# 강사님 코드
+# while True:
+#     nName = str(input('메뉴명 입력'))
+#     if nName == '': break
+#     d = {'menu': nName, 'price': int(input('가격입력'))}
+#     arMenu.append(d)
+# sum = 0
+# for d in range(len(arMenu)):
+#     print(f"{d['menu']} {d['price']}")
+#     sum+=d['price']
+# print(f'메뉴가격 합계 {sum}')
+#
+# arMenu = []
+
 while True:
-    nName = str(input('메뉴명 입력'))
+    nName = input('메뉴명 입력: ')
     if nName == '':
-        for index, value in enumerate(arMenu):
-            print(index + 1, value)
-        print('합계', sum1)
         break
-    nPrice = int(input('가격 입력'))
-    sum1 += nPrice
-    Menu = {'menu': nName}, {'price': nPrice}
-    arMenu.append(Menu)
+    d = {'menu': nName, 'price': int(input('가격 입력: '))}
+    arMenu.append(d)
+
+sum = 0
+for d in arMenu:
+    print(f"{d['menu']} {d['price']}")
+    sum += d['price']
+
+print(f'메뉴 가격 합계: {sum}')

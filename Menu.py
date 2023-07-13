@@ -2,14 +2,15 @@
 # -- 모든 메뉴의 가격 합계 (리스트+딕셔너리)
 # arMenu = [{},{},{}]
 arMenu = []
+sum1 = 0
 while True:
     nName = str(input('메뉴명 입력'))
     if nName == '':
-        sum1 = 0
-        for k, v in arMenu.items:
-            print(k, v)
+        for index, value in enumerate(arMenu):
+            print(index + 1, value)
         print('합계', sum1)
         break
     nPrice = int(input('가격 입력'))
+    sum1 += nPrice
     Menu = {'menu': nName}, {'price': nPrice}
     arMenu.append(Menu)

@@ -1,3 +1,4 @@
+# 모듈은 파일명 패키지는 폴더명
 import glob
 import os
 import random
@@ -16,7 +17,6 @@ print(glob.glob('*.py'))
 print(random.choice(['John', 'Jane', 'James', 'Johanson', 'Joey']))
 print(random.sample(range(1, 45), 6), '+', random.sample(range(1, 9), 1))
 print(sts.mean([1, 2, 3, 4, 5]))
- 재귀함수
 f = urlopen('https://www.naver.com')
 
 now = date.today()

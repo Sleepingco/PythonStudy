@@ -44,13 +44,8 @@ while True:
         print('잘못된 명령어 입니다')
       # orderList의 길이가  0과같으면,그냥종료
       # 그렇지 않으면 sales.add(mobile, order.orderList)
-    if len(nOrder.orderList) > 0:
-      mobile = input('전화번호 입력')
-      for x in nOrder.orderList:
-        lorder = [x]nOrder.orderList
-      sale.add(mobile, lorder)
-    else:
-      break
+    sale.add(nOrder.orderList)
+
   elif command.lower() == 's':
     # 매출보기
     sale.display()

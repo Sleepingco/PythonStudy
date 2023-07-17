@@ -20,10 +20,12 @@ class Order(test12.Menu):
                 break
             ondx = int(ondx)-1
             qty = int(input('주문할 메뉴의 수량을 입력해주세요: '))
+            if qty == '':
+                print('한잔이상 주문해주세요')
             total = self.menulist[ondx]['price'] * qty
             if 0 <= ondx < len(self.menulist):
                 o = self.menulist[ondx]
-                self.orderList.append({'menu': o['name'], 'qty': qty, 'total': total})
+                self.orderList.append({'name': o['name'], 'qty': qty, 'sum': total})
                 self.orderdisplay()
             else:
                 print('잘못된 메뉴번호입니다.')
@@ -42,7 +44,7 @@ class Order(test12.Menu):
         # 주문내역을 보여준다
         n = 1
         for x in self.orderList:
-            print(f"주문번호{n:2d}.{x['menu']:12s},수량{x['qty']:2d}, 가격{x['total']:7d}")
+            print(f"주문번호{n:2d}.{x['name']:12s},수량{x['qty']:2d}, 가격{x['sum']:7d}")
             n += 1
 
     def orderdelete(self):
